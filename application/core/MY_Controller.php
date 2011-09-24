@@ -26,6 +26,18 @@ class MY_Controller extends MX_Controller
     }
 }
 
+/**
+ * Расширение базового контроллера для работы с миграциями
+ */
+class Migration_Controller extends MY_Controller
+{
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->dbforge();
+    }
+}
+
 
 
 /**
